@@ -1,0 +1,102 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+}
+
+.sky-image {
+  height: 100vh;
+  padding: 0px;
+  margin: 0px;
+  background-image: url(./sky.jpg);
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bike-image {
+  position: absolute;
+  bottom: 80px;
+  left: 400px;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  z-index: 5;
+  animation: bike 1s linear infinite;
+}
+
+@keyframes bike {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+
+.road-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 500%;
+  height: 520px;
+  background-image: url("road-removebg-preview.png");
+  background-size: contain;
+  z-index: 1;
+  animation: highway 5s linear infinite;
+  background-repeat: repeat-x;
+}
+
+@keyframes highway {
+  100% {
+    transform: translateX(-3400px);
+  }
+}
+
+.hills-image {
+  position: absolute;
+  background-image: url("hills-removebg-preview.png");
+  bottom: 150px;
+  width: 500%;
+  height: 400px;
+  animation: hills 20s linear infinite;
+  background-repeat: repeat-x;
+}
+
+@keyframes hills {
+  100% {
+    transform: translate(-1500px);
+  }
+}
+
+.bike-wheel1 {
+  position: absolute;
+  width: 120px;
+  height: 94px;
+  bottom: 116px;
+  left: 398px;
+  z-index: 4;
+}
+
+.bike-wheel2 {
+  position: absolute;
+  width: 120px;
+  height: 94px;
+  bottom: 116px;
+  left: 557px;
+  z-index: 4;
+}
+
+.wheel {
+  animation: wheel 1s linear infinite;
+}
+
+@keyframes wheel {
+  100% {
+    transform: rotate(360deg);
+  }
+}
